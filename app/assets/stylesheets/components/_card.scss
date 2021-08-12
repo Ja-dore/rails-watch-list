@@ -1,0 +1,14 @@
+.cards {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    color: white;
+}
+.card {
+    width: 150px;
+    border-radius: 3px;
+    text-align: center;
+    padding: 20px;
+    margin: 5px;
+    background-color: rgba(59, 59, 59, 0.5);
+}

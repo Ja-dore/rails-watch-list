@@ -1,0 +1,47 @@
+<div class="border-bottom fixed-top" id='bovenstuk'>
+    <div class="container d-flex align-items-center justify-content-between py-2">
+       <p class='mb-0'>
+            <span style="font-size: 40px; color: Dodgerblue;">
+            <i class="fad fa-dice-d12"></i> movie
+            </span>
+      </p>
+      <a href="lists/new" class="btn btn-primary">
+          Add a list
+      </a>
+    </div>
+  </div>
+</div>
+<div class="titling" style='background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(<%= image_path 'theater'%>);'>
+    <div class="container">
+      <h1>Keep all your movies listed</h1>
+      <p>Listed</p>
+    </div>
+  </div>
+  </div>
+  <div class="container">
+    <h2 class="text-center">Your Lists</h2>
+    <div class="cards">
+        <% @lists.each do |list| %>
+        <div class='card'>
+        <h4><%=list.name%></h4>
+        </div>
+        <%end%>
+
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+    <div class="links">
+      <span style="font-size: 20px; color: Dodgerblue;">
+      <a href="#"><i class="fab fa-fw fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-fw fa-github"></i></a>
+      <a href="#"><i class="fab fa-fw fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-fw fa-instagram"></i></a>
+      </span>
+      <p>This website was coded with
+      <span style="font-size: 25px; color: Dodgerblue;">
+      <i class="fas fa-heart"></i>
+      </span> at Le Wagon.</p>
+    </div>
+  </div>
