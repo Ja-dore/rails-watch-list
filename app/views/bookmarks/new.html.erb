@@ -3,8 +3,8 @@
     <div class="col">
       <h1>Create a new bookmark</h1>
 
-      <%= simple_form_for @bookmark, @list do |f| %>
-        <%= f.input :name %>
+      <%= simple_form_for [@list, @bookmark] do |f| %>
+        <%= f.input :comment %>
         <%= f.association :movie%>
         <%= f.submit class: 'btn btn-primary' %>
       <% end %>

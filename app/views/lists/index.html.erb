@@ -11,12 +11,9 @@
     </div>
   </div>
 </div>
-<%= cl_image_tag("vux0ned3dr0a3gb4lf3h",
-      width: 400, height: 300, crop: :fill) %>
-<div class="titling">
+<div class="titling" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path("abcg4iexjtjp3v1c7kti.jpg") %>') ">
     <div class="container">
       <h1>Keep all your movies listed</h1>
-      <p>Listed</p>
     </div>
   </div>
   </div>
@@ -24,9 +21,11 @@
     <h2 class="text-center">Your Lists</h2>
     <div class="cards">
         <% @lists.each do |list| %>
-        <div class='card'>
-        <h4><%=list.name%></h4>
-        </div>
+          <%= link_to list_path(list) do%>
+            <div class='card p-20' style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path list.photo.key %>'); background-size: cover;">
+              <h4><%=list.name%></h4>
+            </div>
+          <%end%>
         <%end%>
 
     </div>

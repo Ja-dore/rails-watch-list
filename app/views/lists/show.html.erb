@@ -1,2 +1,18 @@
-<h2><%=@list.name%></h2>
+
+
+  <div class="titling" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @list.photo.key %>')">
+    <h1><%=@list.name%></h1>
+  </div>
+ <main>
+<%@list.movies.each do |movie|%>
+  <div href="#" class="moviecard m-1" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://image.tmdb.org/t/p/original/<%=movie.poster_url%>'); background-size: cover;" >
+      <div class="inner">
+        <h2 class="movietitle"><%= movie.title%></h2>
+        <time class="moviesubtitle"><%=movie.overview%><time>
+        <p>test</p>
+      </div>
+  </div>
+<%end%>
+</main>
+<%= link_to 'add a bookmark to list', new_list_bookmark_path(@list) %>
 <%= link_to 'back to list', lists_path%>
